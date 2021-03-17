@@ -1,0 +1,44 @@
+﻿using math;
+
+fun bool isPrime(num n)
+{
+	for(num i = 2; i < n; i = i + 1)
+	{
+		if(n % i == 0)
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
+fun bool isPalindrome(num n)
+{
+	num reverse = 0;
+	num temp = n;
+	num digit;
+	while(n > 0)
+	{
+		digit = n % 10;
+		n = floor(n / 10);
+		reverse = reverse * 10 + digit;
+	}
+	return reverse == temp;
+}
+
+fun bool isPalprime(num n)
+{
+	return isPrime(n) and isPalindrome(n);
+}
+
+
+print "Enter a number.";
+num n = number(input());
+if(isPalprime(n))
+{
+	printf("{0} is a palprime number.", n);
+}
+else
+{
+	printf("{0} is not a palprime number.", n);
+}
