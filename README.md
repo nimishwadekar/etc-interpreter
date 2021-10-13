@@ -1,2 +1,2 @@
 # etc-interpreter
-A byte code compiler and interpreter for a custom language "ETC".
+A byte code interpreter for a custom language "ETC", written in C#.
